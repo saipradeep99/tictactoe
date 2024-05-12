@@ -1,6 +1,18 @@
 package org.example.models;
 
 public class Cell {
+
+    private int row;
+    private int column;
+    private CellState cellState;
+    private Player player;
+
+    public Cell(int row, int column){
+        this.row=row;
+        this.column=column;
+        this.cellState=CellState.EMPTY;
+    }
+
     public int getRow() {
         return row;
     }
@@ -31,17 +43,6 @@ public class Cell {
 
     public void setPlayer(Player player) {
         this.player = player;
-    }
-
-    private int row;
-    private int column;
-    private CellState cellState;
-    private Player player;
-
-    public Cell(int row, int column){
-        this.row=row;
-        this.column=column;
-        this.cellState=CellState.EMPTY;
     }
 
     public void print(){
