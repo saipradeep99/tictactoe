@@ -47,9 +47,9 @@ public class Cell {
 
     public void print(){
         if(this.player!=null){
-            System.out.println("|"+"symbol"+"|");
+            System.out.print("|"+player.getSymbol().getCh()+"|");
         }else{
-            System.out.println("| |");
+            System.out.print("| |");
         }
     }
 }

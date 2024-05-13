@@ -11,6 +11,7 @@ public class Board {
         this.size=size;
         board=new ArrayList<>();
         for(int i=0;i<size;i++){
+            board.add(new ArrayList<>());
             for(int j=0;j<size;j++){
                 board.get(i).add(new Cell(i,j));
             }
@@ -33,7 +34,7 @@ public class Board {
         return board;
     }
 
-        public void print(){
+    public void print(){
         for(List<Cell> row: board){
             for(Cell cell: row){
                 cell.print();
